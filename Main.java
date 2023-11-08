@@ -2,20 +2,18 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Double[] input = {1.0, 3.0};
-        Double[] toAdd = {1.0, 2.0, 3.0};
-        Polynomial polly = new Polynomial(input);
-        Polynomial adding = new Polynomial(toAdd);
-        Polynomial together = adding.add(polly);
-        Polynomial multi = adding.multi(polly);
-        System.out.println("Polly is:");
-        System.out.println(polly.toStrange());
-        System.out.println("Adding is:");
-        System.out.println(adding.toStrange());
-        System.out.println("Polly plus Adding is:");
-        System.out.println(together.toStrange());
-        System.out.println("Polly times Adding is:");
-        System.out.println(multi.toStrange());
+        Double[] ar = {3.0, 1.0};
+        Polynomial p = new Polynomial(ar);
+        System.out.println("P is:");
+        System.out.println(p.toStrange());
+        System.out.println("Evaluating p for 5 you get:");
+        System.out.println(p.eval(5));
+        System.out.println("P plus itself is:");
+        System.out.println(p.add(p).toStrange());
+        System.out.println("P times itself is:");
+        System.out.println(p.multi(p).toStrange());
+       
+
     }
     
 }
